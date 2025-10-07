@@ -1,13 +1,8 @@
-#include "graph.h"
+#include "structure.h"
+#include "stack.h"
 #include <stdio.h>
-
-#define MAX_STACK 100
-
-scene* Undo[MAX_STACK];
-scene* Redo[MAX_STACK];
 int top = 0;
 int topredo = 0;
-
 void run(scene* node) {
     if (!node) return;
 
@@ -68,6 +63,6 @@ scene* gotosave(scene* node) {
         return node;
     }
 
-    printf("Jumped back to saved point: %s\n", node->description);
+    // printf("Jumped back to saved point: %s\n", node->description);
     return Undo[top - 1];
 }
