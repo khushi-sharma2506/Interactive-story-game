@@ -26,22 +26,19 @@ int main() {
 
     while (1) {
         clearScreen();
-
         printf("%s\n", head->description);
-        printf("\nChoose option:\n");
-        printf("1 : Go Choice 1\n");
-        printf("2 : Go Choice 2\n");
-        printf("3 : Go Choice 3\n");
-        printf("U : Undo\n");
-        printf("R : Redo\n");
-        printf("S : Save this point\n");
-        printf("G : Go to saved point\n");
-        printf("E : Exit game\n");
+        printf("-------------------------------------------------------------------------------------------------------------------------------\n");
+        printf("OPTIONS: ");
+        printf("U : Undo    ");
+        printf("R : Redo    ");
+        printf("S : Save this point    ");
+        printf("G : Go to saved point    ");
+        printf("E : Exit game    ");
         printf("D : Display stack\n");
+        printf("-------------------------------------------------------------------------------------------------------------------------------\n");
         printf("Enter choice: ");
-
         scanf(" %c", &c); // space before %c ignores leftover '\n'
-
+        printf("---------------------------------------------------------------------------------------------------------------------------------\n");
         switch (c) {
             case '1':
                 run(head);
