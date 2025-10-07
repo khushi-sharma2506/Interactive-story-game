@@ -1,18 +1,9 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-typedef struct Node {
-    char description[2000];
-    struct Node* choice1;
-    struct Node* choice2;
-    struct Node* choice3;
-    int visited;
-} scene;
+#include "graph.h"
 
 scene* array[100]; //scene
-
-#define NUM_SCENES 24
-#define MAX_TEXT 2000
 
 char arr[NUM_SCENES][MAX_TEXT] = {
     "Shadows over Anthea\n\n Anthea is a vibrant, bustling city with a rich history.\n Queen Anthea rules with wisdom, but now a dangerous secret group called The Shadows is plotting to take over.\n The city is safety depends on two brave soldiers-Valkyrie and Orion-who must uncover and stop these threats.\n Are you ready to begin your adventure?\n\n1.Continue\n\n2.Exit\n",
@@ -63,8 +54,6 @@ char arr[NUM_SCENES][MAX_TEXT] = {
     
     "Kingdom of Eldoria\n\nThe mystical kingdom of Eldoria grants your request for magical assistance.\n\n1. The story ends here with Eldoria's magical alliance ensuring hope.\n\n2. Restart or exit."
 };
-
-int n = 40; // No of scenes
 
  scene* create() {
     scene* temp;
